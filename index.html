@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="LinkSentinel MAX - Analyseur de liens et fichiers">
+  <title>LinkSentinel MAX</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-icon">🛡️</span>
+      <div>
+        <h1>LinkSentinel <span>MAX</span></h1>
+        <p>Protection et analyse numérique</p>
+      </div>
+    </div>
+    <span class="status">● EN LIGNE</span>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <span class="eyebrow">SECURITY CENTER</span>
+      <h2>Analysez avant de <span>cliquer.</span></h2>
+      <p>Examinez les liens suspects et identifiez les risques potentiels.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <h2>🔎 Analyseur de liens</h2>
+        <span class="tag">URL SCANNER</span>
+      </div>
+
+      <label for="urlInput">Adresse à analyser</label>
+      <input
+        id="urlInput"
+        type="url"
+        placeholder="https://exemple.com"
+        autocomplete="url"
+      >
+
+      <button id="analyzeBtn" type="button">
+        ANALYSER LE LIEN
+      </button>
+
+      <div id="result" class="result" aria-live="polite">
+        <p>En attente d'une adresse à analyser.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <h2>📁 Analyse de fichiers</h2>
+        <span class="tag">FILE CHECK</span>
+      </div>
+
+      <p>Sélectionnez un fichier pour afficher ses informations.</p>
+
+      <input id="fileInput" type="file">
+
+      <div id="fileResult" class="result">
+        <p>Aucun fichier sélectionné.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>📊 Centre de sécurité</h2>
+      <div class="stats">
+        <div class="stat">
+          <strong id="scanCount">0</strong>
+          <span>Analyses</span>
+        </div>
+        <div class="stat">
+          <strong id="safeCount">0</strong>
+          <span>Liens HTTPS</span>
+        </div>
+      </div>
+      <p class="disclaimer">
+        Une connexion HTTPS ne garantit pas qu'un site est fiable.
+        Les résultats préliminaires ne remplacent pas une analyse
+        par un service de réputation spécialisé.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>LinkSentinel MAX © 2026</p>
+    <p>Votre vigilance est votre première protection.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
